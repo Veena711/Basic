@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assyrian Heritage Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf6ef;
+      color: #4d3319;
+      margin: 0;
+    }
+    header {
+      background-color: #8b5e3c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background-color: #e0b084;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4d3319;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 15px;
+    }
+    input, select, textarea, button {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #8b5e3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a66a42;
+    }
+    footer {
+      background-color: #8b5e3c;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Assyrian Heritage Registration</h1>
+    <h3>Preserve our legacy. Join the cultural record.</h3>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Main Section -->
+  <main>
+    <h2>Register Your Assyrian Roots</h2>
+
+    <form action="/submit" method="post" enctype="multipart/form-data" autocomplete="on" novalidate>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Veena M" required maxlength="100" minlength="2" autofocus>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="birthdate">Birth Date:</label>
+      <input type="date" id="birthdate" name="birthdate"  required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">--Select gender--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="desc">Tell us about your ancestry:</label>
+      <textarea id="desc" name="desc" rows="4" maxlength="500">My family is originally from Nineveh...</textarea>
+
+      <label for="photo">Upload Family Crest:</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+
+      <label for="password">Create Password:</label>
+      <input type="password" id="password" name="password" required minlength="6">
+
+      <label for="color">Favorite Traditional Color:</label>
+      <input type="color" id="color" name="color" value="#8b5e3c">
+
+      <label for="range">Cultural Knowledge (0–10):</label>
+      <input type="range" id="range" name="knowledge" min="0" max="10" value="5">
+
+      <label for="website">Your Website:</label>
+      <input type="url" id="website" name="website" placeholder="https://yourheritage.com" maxlength="100" minlength="2">
+
+      <label for="generations">Generations Traced:</label>
+      <input type="text" id="generations" name="generations" placeholder="3" maxlength="100" minlength="1" required>
+
+      <label for="bestTime">Best Time To Contact:</label>
+      <input list="times" id="bestTime" name="bestTime">
+      <datalist id="times">
+        <option value="Morning">
+        <option value="Afternoon">
+        <option value="Evening">
+      </datalist>
+
+      <label for="agreeData">Agree to share your data:</label>
+      <input type="checkbox" id="agreeData" name="agreeData" required>
+
+      <label for="subscribe">Subscribe to newsletter:</label>
+      <input type="checkbox" id="subscribe" name="subscribe">
+
+      <label for="languagePref">Preferred Language:</label>
+      <input list="languages" id="languagePref" name="languagePref">
+      <datalist id="languages">
+        <option value="Assyrian Neo-Aramaic">
+        <option value="Arabic">
+        <option value="English">
+      </datalist>
+
+      <label for="submit">Submit:</label>
+      <button type="submit" formaction="/custom-submit" formmethod="post">Submit</button>
+
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Assyrian Cultural Registry. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
